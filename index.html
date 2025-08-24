@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ECOWATT — Ingeniería ambiental aplicada</title>
+<meta content="ECOWATT: ingeniería ambiental sólida, robusta y eficiente aplicada al tratamiento de aguas, efluentes y aire. Presencia en Argentina, Uruguay, Paraguay y Bolivia." name="description"/>
+<!-- Montserrat per brand sheet -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root{--solutions-gray:#999999; /* TODO: reemplazar por gris exacto de la captura */ 
+      --blue:#001489;
+      --green:#009A44;
+      --black:#000000;
+      --dark:#0f172a;
+      --text:#1b2533;
+      --muted:#667085;
+      --white:#ffffff;
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Montserrat',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;color:var(--text);background:var(--white);line-height:1.6}
+    a{color:var(--blue);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1180px;margin:0 auto;padding:0 20px}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid #e5e7eb}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand img{height:44px;width:auto;display:block}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a{font-weight:600;color:var(--dark)}
+    .btn{display:inline-block;padding:10px 16px;border-radius:999px;font-weight:700;border:2px solid var(--blue);background:var(--blue);color:white}
+    .btn.alt{background:transparent;color:var(--blue)}
+    .btn.green{border-color:var(--green);background:var(--green)}
+
+    /* Bands */
+    section.band-blue{background:var(--blue);color:white;padding:56px 0}
+    section.band-green{background:var(--green);color:white;padding:56px 0}
+    section.band-white{background:#fff;color:var(--text);padding:56px 0}
+    section.band-gray{background:#f6f7fb;color:var(--text);padding:56px 0}
+    section.band-gray-dark{background:var(--solutions-gray);color:var(--text);padding:56px 0}
+    h3.section-title{font-size:28px;margin:0 0 10px 0}
+    p.lead{opacity:.9;margin:0 0 22px 0}
+
+    /* Hero */
+    .hero video,.hero img{width:100%;height:66vh;object-fit:cover;display:block}
+    .hero{position:relative}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.45));display:flex;align-items:center;color:white}
+    .hero-inner{max-width:980px}
+    .hero h2{font-size:40px;margin:0 0 10px 0;line-height:1.15;letter-spacing:0.2px}
+    .hero p{font-size:18px;opacity:.95;margin:0 0 20px 0}
+    .hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+
+    /* Cards and grid */
+    .grid{display:grid;gap:18px}
+    @media(min-width:720px){.grid.cols-2{grid-template-columns:1fr 1fr}}
+    @media(min-width:960px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}
+                             .grid.cols-4{grid-template-columns:repeat(4,1fr)}}
+    .card{background:white;border:1px solid #e5e7eb;border-radius:var(--radius);padding:18px;color:var(--text)}
+    .card h4{margin:0 0 8px 0}
+    .chip{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);color:white;font-weight:700;font-size:12px}
+    .chip.dark{background:rgba(0,0,0,.05);border-color:#e5e7eb;color:var(--blue)}
+    .chip img{height:36px;width:auto;display:inline-block}
+    .icon-white{filter:brightness(0) invert(1)}
+    .icon-black{filter:none}
+
+    /* Footer */
+    footer{background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.45)), var(--green);color:white;padding:24px 0;margin-top:40px}
+    footer a{color:#eaf6ff}
+  
+    @media(max-width:720px){
+      .hero h2{font-size:28px}
+      .hero p{font-size:16px}
+      .btn{width:100%;text-align:center}
+      header .nav{gap:10px}
+    }
+
+  
+    /* Accentos de color en tarjetas sobre bandas blancas */
+    .band-white .card h4{ color: var(--blue); }
+    .band-white .card p strong{ color: var(--green); }
+    .band-white .chip.dark{ color: var(--blue); border-color: var(--blue); background: rgba(0,20,137,.06); }
+  
+.partner-logos {display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));justify-items:center;align-items:center;gap:60px;width:100%}
+.partner-logos img {max-height:80px;max-width:200px;width:auto;object-fit:contain;display:block;margin:auto;background:transparent}
+    
+
+@media (min-width: 720px){
+  .partner-logos {display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));justify-items:center;align-items:center;gap:60px;width:100%}
+}
+
+.partner-logos img.aqana-logo {max-height:80px;width:auto;display:block;margin:auto}
+  8%{opacity:1}
+  25%{opacity:1}
+  33%{opacity:0}
+  100%{opacity:0}
+}
+
+/* Ajuste relación 4:3 y mayor tamaño en la galería */
+.slideshow{position:relative;width:100%;padding-top:75%; /* 4:3 ratio */ height:auto;border-radius:10px;overflow:hidden}
+.slideshow img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}
+</style>
+</head>
+<body><!-- BAND: QUIENES (BLUE) -->
+<!-- HERO (full-width video) -->
+<script>
+    document.addEventListener('click', function(e){
+      if(e.target && e.target.classList.contains('leer-mas')){
+        const card = e.target.closest('.card');
+        const more = card && card.querySelector('.more-content');
+        if(more){
+          const isHidden = getComputedStyle(more).display === 'none';
+          more.style.display = isHidden ? 'block' : 'none';
+          e.target.textContent = isHidden ? 'Ver menos' : 'Leer más…';
+        }
+      }
+    });
+    
+  </script><header>
+<div class="container nav">
+<div class="brand">
+<a href="#inicio">&lt;!-- Reemplazar 'ecowatt_logo_placeholder.svg' con logo definitivo --&gt;
+<img alt="ECOWATT (placeholder)" src="assets/img/ecowatt_logo.svg"/></a>
+</div>
+<nav>
+<ul>
+<li><a href="#soluciones">Soluciones</a></li>
+<li><a href="#quienes">Quiénes somos</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+</nav>
+<a class="btn alt" href="#contacto">Consultar</a>
+</div>
+</header><section class="hero" id="inicio">
+<video aria-label="Video de plantas y equipos en operación" autoplay="" loop="" muted="" playsinline="" poster="">
+<source src="assets/video/hero-ecowatt.mp4" type="video/mp4"/>
+</video>
+<div class="hero-overlay">
+<div class="container hero-inner">
+<h2>Ingeniería ambiental sólida, robusta y eficiente aplicada al tratamiento de aguas, efluentes y aire</h2>
+<p>Somos ECOWATT, una empresa de ingeniería interdisciplinaria que diseña y provee sistemas de tratamiento de aguas, efluentes y aire con foco en eficiencia, confiabilidad y reducción de costos operativos. Con presencia en Argentina, Uruguay, Paraguay y Bolivia, acompañamos a municipios, industrias y desarrolladores en proyectos de alta calidad, respaldados por alianzas estratégicas internacionales.</p>
+<div class="hero-ctas">
+<a class="btn green" href="#soluciones">Ver soluciones</a>
+<a class="btn alt" href="#quienes">Conocenos</a>
+</div>
+</div>
+</div>
+</section><section class="band-blue" id="quienes">
+<div class="container">
+<h3 class="section-title">Quiénes somos</h3>
+<div class="grid cols-2">
+<div class="card">
+<p>Somos ECOWATT, un equipo interdisciplinario con formaciones en distintas áreas y una fuerte orientación hacia soluciones en ingeniería hidráulica, química, mecánica, civil, ambiental, eléctrica e instrumentación.</p>
+<p><strong>Nos distinguimos por:</strong></p>
+<ul>
+<li>Diseños a medida para cada necesidad, desde urbanizaciones hasta procesos industriales complejos.</li>
+<li>Eficiencia y confiabilidad en cada proyecto, minimizando mantenimiento y optimizando recursos.</li>
+<li>Respaldo internacional, con tecnología de empresas líderes en Europa y América.</li>
+<li>Orientación al cliente, acompañando desde la ingeniería conceptual hasta la implementación final.</li>
+</ul>
+<p style="letter-spacing:.35em;text-transform:uppercase;opacity:.9"><small></small></p>
+</div>
+<div class="card">
+<h4>¿Por qué ECOWATT?</h4>
+<p>Ingeniería aplicada, tecnologías probadas y soporte local. Acompañamos de punta a punta: ingeniería conceptual, detalle, provisión, montaje y puesta en marcha.</p>
+<p><a class="btn" href="#contacto">Iniciar consulta técnica</a></p>
+</div>
+</div>
+</div>
+</section><section class="band-white" id="proceso">
+<div class="container">
+<h3 class="section-title">Proceso de trabajo</h3>
+<p class="lead">Metodología ingenieril adaptable. Siempre buscamos <strong>reducir contaminantes en origen</strong> y <strong>optimizar procesos</strong> para minimizar inversiones y OPEX.</p>
+<style>
+      /* Estilos acotados a esta banda */
+      #proceso .card { position: relative; }
+      #proceso .step-badge{
+        display:inline-flex; align-items:center; justify-content:center;
+        width:36px; height:36px; border-radius:999px;
+        background:var(--green); color:#fff; font-weight:800;
+        box-shadow:0 2px 6px rgba(0,0,0,.12); margin-bottom:10px;
+      }
+      #proceso .card h4{ margin:0 0 8px 0; }
+      #proceso .card p{ margin:0; }
+    </style>
+<div class="grid cols-4">
+<div class="card">
+<span class="step-badge">1</span>
+<h4>Diagnóstico de situación</h4>
+<p>Relevamiento técnico de caudales, cargas, procesos y normativa. Oportunidades de mejora en origen.</p>
+</div>
+<div class="card">
+<span class="step-badge">2</span>
+<h4>Ingeniería de procesos</h4>
+<p>Balances de masa/energía, simulaciones, dimensionamiento y selección tecnológica óptima.</p>
+</div>
+<div class="card">
+<span class="step-badge">3</span>
+<h4>Implementación</h4>
+<p>Provisión de equipos, integración a plantas existentes o construcción de nuevas unidades y puesta en marcha.</p>
+</div>
+<div class="card">
+<span class="step-badge">4</span>
+<h4>Seguimiento y optimización</h4>
+<p>Capacitación, monitoreo y soporte para mantener eficiencia y adaptarse a nuevas exigencias.</p>
+</div>
+</div>
+</div>
+</section><section class="band-gray-dark">
+<div class="container">
+<h3 class="section-title">Soluciones y tecnologías</h3>
+<p class="lead">Seleccioná un área para explorar tecnologías y casos de implementación.</p>
+<div class="grid cols-4"><div class="card"><span class="chip"><img alt="" class="icon-black" src="gota-blue (2).svg"/> Aguas</span><h4>Aguas</h4><p>Potabilización y acondicionamiento de agua para uso urbano e industrial. Implementamos sistemas de tratamiento convencional —cribado, coagulación, floculación, sedimentación y filtración— y procesos avanzados mediante membranas, intercambio iónico (incluida la electrodeionización) y otras tecnologías complementarias, según la calidad de fuente y los objetivos del cliente. Además, proveemos los equipos y unidades de proceso, con ingeniería, montaje y soporte local.</p><div class="more-content" style="display:none;margin-top:10px"><p>Diseñamos y ejecutamos sistemas de potabilización ajustados a calidad de fuente y norma objetivo.<br/>
+    Procesos aplicados (según caso): pretratamientos y cribado (finos/medios), coagulación–floculación, sedimentación de alta tasa con módulos lamelares de perfil chevron, DAF, filtración (lecho granular, disco, tambor, microtamiz) y membranas (MF/UF/RO), con desinfección final. Para calidades objetivo más exigentes incorporamos intercambio iónico/electrodeionización y procesos avanzados.</p><h4>Suministro de equipos y unidades</h4><p>Integramos y proveemos: sistemas de cribado y manejo de residuos; floculadores y clarificadores (incl. módulos/paquetes lamelares de perfil chevron); rasquetas/puentes de lodos; unidades de filtración por disco y por tambor; filtros de arena (convencionales y de operación continua) y microfiltros; además de instrumentación y automatización asociada. Opcional paquetes modulares “plug &amp; play” cuando corresponde.</p><h4>Valor agregado</h4><ul>
+<li>Innovación y eficiencia técnica: selección entre líneas convencionales y avanzadas para lograr la calidad objetivo con alta confiabilidad operativa.</li>
+<li>Flexibilidad: soluciones compactas y paquetes preensamblados ideales para ampliaciones o nuevas plantas.</li>
+<li>Soporte integral: ingeniería de proceso, suministro, montaje, puesta en marcha, capacitación y O&amp;M asistido.</li>
+</ul></div><div style="margin-top:12px"><button class="btn alt leer-mas">Leer más…</button></div></div><div class="card"><span class="chip"><img alt="" class="icon-black" src="cloaca-blue (2).svg"/> Efluentes urbanos e industriales</span><h4>Efluentes urbanos e industriales</h4><p>Soluciones integrales para efluentes municipales/domésticos e industriales, combinando trenes de pretratamiento, procesos biológicos (aeróbicos y anaeróbicos), polimento con filtración biológica, tratamientos terciarios y opciones de reúso del agua tratada. Cuando corresponde, integramos aprovechamiento energético mediante biogás y esquemas de minimización de descarga (incl. ZLD), asegurando cumplimiento normativo y eficiencia operativa.</p><div class="more-content" style="display:none;margin-top:10px"><h4>Efluentes urbanos</h4><p>Soluciones para municipios, desarrollos urbanísticos y corrientes domésticas en industrias.</p><p>Procesos aplicados: barros activados, MBR, MBBR, lechos percoladores, IFAS, UASB, lagunas anaeróbicas, terciarios y desinfección.</p><p>Reúso y polimento biológico: incorporación de filtración biológica de pulido (p. ej., BAC/biocarbón, percolación de polimento) y etapas de membranas cuando se requiere calidad para riego, servicios, recirculación u otros usos permitidos.</p><p>Integración de servicios y equipos: pretratamiento robusto (rejas/tamices, desarenado/desengrasado), aireación y mezcla de bajo mantenimiento, monitoreo y soporte técnico.</p><p>Enfoque: cumplimiento normativo, eficiencia operativa y reducción de CAPEX/OPEX.</p><h4><img alt="Ícono fábrica – Efluentes industriales" class="icon-black" src="fabrica-blue (2).svg" style="height:36px;width:auto;display:inline-block"/> Efluentes industriales y generación de biogás</h4><p>Tratamiento físico–químico y biológico para adecuación de vuelcos en múltiples rubros (alimentos y bebidas, agroindustria, químico/farmacéutico, petróleo y gas, entre otros).</p><h4>Tecnologías clave</h4><ul>
+<li>Anaeróbicas de alta tasa para conversión de carga orgánica en biogás.</li>
+<li>Etapas aeróbicas (MBBR, barros activados, IFAS) para remoción de DBO/DQO y nitrificación–desnitrificación.</li>
+<li>Polimento y reúso: filtración biológica de pulido, carbón activado/biocarbón, terciarios avanzados y membranas (UF/RO) orientados a reúso o ZLD, según objetivo del cliente.</li>
+</ul><p>Servicios profesionales: ingeniería de proceso, pilotos y pruebas de tratabilidad, laboratorio, auditorías de performance, operación y mantenimiento asistido.</p></div><div style="margin-top:12px"><button class="btn alt leer-mas">Leer más…</button></div></div><div class="card"><span class="chip"><img alt="" class="icon-black" src="aire-blue (2).svg"/> Aire y gases</span><h4>Aire y gases</h4><p>Depuración de aire y control de emisiones/olores para aplicaciones urbanas e industriales, incluyendo soluciones biológicas y fisicoquímicas, además de limpieza de biogás (abatimiento de H₂S y siloxanos).</p><div class="more-content" style="display:none;margin-top:10px"><ul>
+<li>Tecnologías: biofiltración y biotrickling, lavadores (scrubbers), adsorción con carbón activado, captación/abatimiento de polvos, ventilación industrial e insonorización.</li>
+<li>Servicios: ingeniería, consultoría, diseño, fabricación e instalación llave en mano; integración de pretratamiento de biogás para maximizar la eficiencia de valorización energética.</li>
+</ul></div><div style="margin-top:12px"><button class="btn alt leer-mas">Leer más…</button></div></div><div class="card"><span class="chip"><img alt="" class="icon-black" src="agitador-blue (2).svg"/> Equipamiento</span><h4>Equipamiento</h4><p>Provisión de equipos, repuestos e insumos para pretratamiento, clarificación/decantación, procesos biológicos (aireación y mezcla) y control de emisiones, con ingeniería y soporte local.</p><div class="more-content" style="display:none;margin-top:10px"><ul>
+<li>Pretratamiento y separación sólido–líquido: rejas/tamices, tambores, desarenadores/desengrasadores, transporte y compactación.</li>
+<li>Clarificación/Decantación: módulos lamelares (seditubos) de perfil chevron y componentes para decantadores/clarificadores.</li>
+<li>Procesos biológicos (reactores y lagunas): aireación y mezcla de alta eficiencia y bajo mantenimiento (selección según matriz y carga).</li>
+<li>Aire y gases: biofiltros, biotrickling, scrubbers, adsorción con carbón activado, ventilación e insonorización.</li>
+<li>Servicios asociados: ingeniería, suministro, instalación, pilotos, laboratorio, auditorías y asistencia tecnológica; operación y mantenimiento según necesidad. Nota: los detalles de filtración biológica de agua y reúso se desarrollan en la sección Efluentes.</li>
+</ul></div><div style="margin-top:12px"><button class="btn alt leer-mas">Leer más…</button></div></div></div>
+</div>
+</section><section class="band-white">
+<div class="container">
+<h3 class="section-title">Partners internacionales</h3>
+<p class="lead">Alianzas estratégicas con empresas líderes.</p>
+<div class="partner-logos"><a href="#" rel="noopener noreferrer" target="_blank"><img alt="Fuchs" src="assets/img/partners/fuchs.svg"/></a><a href="#" rel="noopener noreferrer" target="_blank"><img alt="2G Ingeniería y Servicios" src="assets/img/partners/2g.svg"/></a><a href="#" rel="noopener noreferrer" target="_blank"><img alt="Aqana" src="assets/img/partners/aqana.svg"/></a><a href="#" rel="noopener noreferrer" target="_blank"><img alt="DAGA" src="assets/img/partners/daga.svg"/></a><a href="#" rel="noopener noreferrer" target="_blank"><img alt="AirClean" src="assets/img/partners/airclean.svg"/></a></div></div>
+</section><section class="band-green" id="galeria">
+<div class="container">
+<h3 class="section-title">Galería</h3>
+<div class="grid cols-3" style="align-items:stretch"><div class="card"><img alt="Galería 01 (placeholder)" src="assets/img/gallery/galeria_01.jpg"/></div><div class="card"><img alt="Galería 02 (placeholder)" src="assets/img/gallery/galeria_02.jpg"/></div><div class="card"><img alt="Galería 03 (placeholder)" src="assets/img/gallery/galeria_03.jpg"/></div><div class="card"><img alt="Galería 04 (placeholder)" src="assets/img/gallery/galeria_04.jpg"/></div><div class="card"><img alt="Galería 05 (placeholder)" src="assets/img/gallery/galeria_05.jpg"/></div><div class="card"><img alt="Galería 06 (placeholder)" src="assets/img/gallery/galeria_06.jpg"/></div><div class="card"><img alt="Galería 07 (placeholder)" src="assets/img/gallery/galeria_07.jpg"/></div><div class="card"><img alt="Galería 08 (placeholder)" src="assets/img/gallery/galeria_08.jpg"/></div><div class="card"><img alt="Galería 09 (placeholder)" src="assets/img/gallery/galeria_09.jpg"/></div><div class="card"><img alt="Galería 10 (placeholder)" src="assets/img/gallery/galeria_10.jpg"/></div><div class="card"><img alt="Galería 11 (placeholder)" src="assets/img/gallery/galeria_11.jpg"/></div><div class="card"><img alt="Galería 12 (placeholder)" src="assets/img/gallery/galeria_12.jpg"/></div></div>
+<div class="grid cols-3 gallery-grid"><img alt="Placeholder galería 1 (reemplazar por imagen real)" src="assets/img/gallery/placeholder1.jpg"/><img alt="Placeholder galería 2 (reemplazar por imagen real)" src="assets/img/gallery/placeholder2.jpg"/><img alt="Placeholder galería 3 (reemplazar por imagen real)" src="assets/img/gallery/placeholder3.jpg"/><img alt="Placeholder galería 4 (reemplazar por imagen real)" src="assets/img/gallery/placeholder4.jpg"/><img alt="Placeholder galería 5 (reemplazar por imagen real)" src="assets/img/gallery/placeholder5.jpg"/><img alt="Placeholder galería 6 (reemplazar por imagen real)" src="assets/img/gallery/placeholder6.jpg"/><img alt="Placeholder galería 7 (reemplazar por imagen real)" src="assets/img/gallery/placeholder7.jpg"/><img alt="Placeholder galería 8 (reemplazar por imagen real)" src="assets/img/gallery/placeholder8.jpg"/><img alt="Placeholder galería 9 (reemplazar por imagen real)" src="assets/img/gallery/placeholder9.jpg"/></div></div>
+</section><section class="band-white" id="contacto">
+<div class="container">
+<h3 class="section-title">Contacto</h3>
+<p class="lead">Contanos sobre tu proyecto: caudal, tipo de efluente, objetivo de calidad, plazos y ubicación.</p>
+<div class="grid cols-2">
+<div class="card">
+<div style="position:relative;padding-top:56.25%;border-radius:14px;overflow:hidden">
+<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Hipolito%20Yrigoyen%20986%2C%20CABA&amp;output=embed" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" title="Mapa oficina ECOWATT"></iframe>
+</div>
+</div>
+<form class="card" onsubmit="event.preventDefault(); alert('Gracias. Te responderemos a la brevedad.');">
+<label>Nombre y empresa<br/><input required="" style="width:100%;padding:10px;border:1px solid #d1d5db;border-radius:10px" type="text"/></label><br/><br/>
+<label>Email<br/><input required="" style="width:100%;padding:10px;border:1px solid #d1d5db;border-radius:10px" type="email"/></label><br/><br/>
+<label>Mensaje<br/><textarea required="" rows="6" style="width:100%;padding:10px;border:1px solid #d1d5db;border-radius:10px"></textarea></label><br/><br/>
+<button class="btn green" type="submit">Enviar consulta</button>
+</form>
+<div class="card">
+<h4>Datos de contacto</h4>
+<p>Email: <a href="mailto:contacto@ecowatt.com.ar">contacto@ecowatt.com.ar</a></p>
+<p>WhatsApp: <a href="https://wa.me/54911660470663" rel="noopener" target="_blank">+54 9 11 6604 70663</a></p>
+<p>Operamos en Argentina, Uruguay, Paraguay y Bolivia.</p>
+<p><small>© ECOWATT. Todos los derechos reservados.</small></p>
+</div>
+</div>
+</div>
+</section><footer><div class="container"><p>ECOWATT - Ingeniería ambiental aplicada</p></div></footer></body>
+</html>
+<!-- BAND: SOLUCIONES Y TECNOLOGÍAS (WHITE) -->
+<!-- BAND: PARTNERS (GREEN) -->

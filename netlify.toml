@@ -1,0 +1,24 @@
+# Publica un sitio estático desde la raíz del repo
+[build]
+  publish = "."
+
+# Force 404 for rutas SPA si hiciera falta (no aplica, pero útil)
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+  force = false
+
+# Seguridad y caché básico
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-XSS-Protection = "1; mode=block"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
